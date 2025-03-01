@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/about.css" rel="stylesheet">
+        <link href="./styles/contact.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -56,20 +57,26 @@
             <a href="/resume.html">Resume</a>
         </nav>
         <footer>
-            <form action="https://httpbin.org/" method="GET">
+            <form id="contact-form" action="" method="GET">
+                <h1>Contact Me!</h1>
+
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" class="required-field" name="name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" class="required-field" name="email" required>
 
                 <label for="comments">Comments</label>
                 <textarea id="comments" name="comments"></textarea>
 
                 <input type="hidden" name="possible_bot" value="true">
 
-                <button type="submit">Submit</button>
+                <output id="error" class="output-message"></output>
+                <output id="info" class="output-message"></output>
+
+                <button id="submit" type="submit" onclick="validateFields()">Submit</button>
             </form>
         </footer>
+        <script src="./js/form.js"></script>
     </body>
 </html>

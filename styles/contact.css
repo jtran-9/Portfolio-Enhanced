@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    justify-self: center;
+    border: 4px solid #f3b47a;
+    padding: 2rem;
+    background-color: #ffd3ad;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form label {
+    width: fit-content;
+}
+
+form label + * {
+    margin-bottom: 1rem;
+}
+
+form button {
+    height: 2rem;
+    width: 10vw;
+    align-self: center;
+}
+
+label:has( + input[required])::after {
+    content: '*';
+    color: red;
+    float: right;
+}
+
+input[required] {
+    height: 2rem;
+}
+
+#comments {
+    resize: none;
+    height: 10vh;
+}
+
+#error, #info {
+    display: none;
+}
+
+.output-message {
+    margin-bottom: 0.5rem;
+}
