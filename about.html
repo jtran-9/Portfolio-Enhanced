@@ -4,8 +4,8 @@
         <title>Justin Tran's Portfolio</title>
         <meta name="Justin Tran's Portfolio" content="A showcase of all of my projects!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./navbar.css" rel="stylesheet">
-        <link href="./about.css" rel="stylesheet">
+        <link href="./styles/navbar.css" rel="stylesheet">
+        <link href="./styles/about.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -55,5 +55,21 @@
             <a href="/projects.html">Projects</a>
             <a href="/resume.html">Resume</a>
         </nav>
+        <footer>
+            <form action="https://httpbin.org/" method="GET">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <input type="hidden" name="possible_bot" value="true">
+
+                <button type="submit">Submit</button>
+            </form>
+        </footer>
     </body>
 </html>
