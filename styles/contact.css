@@ -51,7 +51,3 @@ input[required] {
 .output-message {
     margin-bottom: 0.5rem;
 }
-
-@media (width <= 768px) {
-
-}
