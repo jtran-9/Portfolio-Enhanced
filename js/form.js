@@ -1,7 +1,3 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-});
-
 function validateFields() {
     document.getElementById('error').style.display = "none";
     document.getElementById('info').style.display = "none";
@@ -10,18 +6,18 @@ function validateFields() {
   
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('comments').value.trim();
+    const comments = document.getElementById('comments').value.trim();
   
     if (!name || !email) {
         document.getElementById('error').style.display = "block";
-        document.getElementById('error').textContent = "All fields are required!";
+        document.getElementById('error').textContent = "Please fill out all required fields!";
         return;
     }
   
     const formData = {
         name: name,
         email: email,
-        message: message
+        comments: comments
     };
   
     fetch('https://httpbin.org/post', {
@@ -35,7 +31,7 @@ function validateFields() {
     .then(data => {
         clearFields();
         document.getElementById('info').style.display = "block";
-        document.getElementById('info').textContent = "Form submitted successfully!";
+        document.getElementById('info').textContent = "Thank you!";
     })
     .catch(error => {
         document.getElementById('error').style.display = "block";
